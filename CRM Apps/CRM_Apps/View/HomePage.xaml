@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:converters="clr-namespace:CRM_Apps.Converter;assembly=CRM_Apps"
+            xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+            x:Class="CRM_Apps.View.HomePage"
+            Title="Home">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <converters:WholePercentToDecimalPercent x:Key="WholePercentToDecimalPercent" />
+            <converters:AmountToIDRConverter x:Key="AmountToIdrConverter" />
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <ContentPage Title="Sales" x:Name="SalesContentPage">
+        <StackLayout Orientation="Vertical">
+            <Label x:Name="AddSaleLabel" TextColor="#0078D7" Text="Add New Sale" FontSize="24" HorizontalOptions="Start" Margin="16, 16, 0, 16">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="AddSaleTap" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <ListView ItemsSource="{Binding Sales}" HasUnevenRows="True" ItemSelected="OnSalesItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="16">
+                                <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="24" />
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding Deal}" />
+                                    <Label Text="{Binding Amount,Converter={StaticResource AmountToIdrConverter}}"
+                                       HorizontalOptions="EndAndExpand" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Customers" x:Name="CustomersContentPage">
+        <StackLayout Orientation="Vertical">
+            <Label x:Name="AddCustomerLabel" TextColor="#0078D7" Text="Add New Customer" FontSize="24" HorizontalOptions="Start" Margin="16, 16, 0, 16">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="AddCustomerTap" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <ListView ItemsSource="{Binding Customers}" HasUnevenRows="True" ItemSelected="OnCustomersItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="8">
+                                <controls:CircleImage Source="{Binding ProfileImageUrl}" Aspect="AspectFill">
+                                    <controls:CircleImage.WidthRequest>
+                                        <OnPlatform x:TypeArguments="x:Double"
+                                                    iOS="55"
+                                                    Android="55"
+                                                    WinPhone="75" />
+                                    </controls:CircleImage.WidthRequest>
+                                    <controls:CircleImage.HeightRequest>
+                                        <OnPlatform x:TypeArguments="x:Double"
+                                                    iOS="55"
+                                                    Android="55"
+                                                    WinPhone="75" />
+                                    </controls:CircleImage.HeightRequest>
+                                </controls:CircleImage>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="24" />
+                                    <Label Text="{Binding Company}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

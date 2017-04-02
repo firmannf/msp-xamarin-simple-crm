@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:CRM_Apps.Converter;assembly=CRM_Apps"
+             x:Class="CRM_Apps.View.SalesPage"
+             Title="Sales">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:WholePercentToDecimalPercent x:Key="WholePercentToDecimalPercent" />
+            <converters:AmountToIDRConverter x:Key="AmountToIdrConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical">
+        <Label x:Name="AddSaleLabel" TextColor="#0078D7" Text="Add New Sale" FontSize="24" HorizontalOptions="Start" Margin="16, 16, 0, 16">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer x:Name="AddSaleTap" NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>
+        <ListView ItemsSource="{Binding Sales}" HasUnevenRows="True" ItemSelected="OnSalesItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="16">
+                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="24" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Deal}" />
+                                <Label Text="{Binding Amount,Converter={StaticResource AmountToIdrConverter}}"
+                                       HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

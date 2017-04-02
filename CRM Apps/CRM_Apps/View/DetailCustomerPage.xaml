@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="CRM_Apps.View.DetailCustomerPage"
+             Padding="8"
+             Title="Detail Customer">
+    <ScrollView Orientation="Vertical">
+        <StackLayout Orientation="Vertical">
+            <abstractions:CircleImage x:Name="ProfileImage" Aspect="AspectFill" HorizontalOptions="Start" VerticalOptions="Start">
+                <abstractions:CircleImage.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                iOS="55"
+                                Android="55"
+                                WinPhone="75" />
+                </abstractions:CircleImage.WidthRequest>
+                <abstractions:CircleImage.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                iOS="55"
+                                Android="55"
+                                WinPhone="75" />
+                </abstractions:CircleImage.HeightRequest>
+            </abstractions:CircleImage>
+            <Label Text="Name" FontAttributes="Bold" />
+            <Label x:Name="NameLabel" />
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" />
+            <Label Text="Company" FontAttributes="Bold" />
+            <Label x:Name="CompanyLabel" />
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" />
+            <Label Text="Phone" FontAttributes="Bold" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label x:Name="PhoneLabel" />
+                <Image x:Name="PhoneImage" Source="ic_phone.png" HorizontalOptions="EndAndExpand" BackgroundColor="#0078D7">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="PhoneTapImage" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" />
+            <Label Text="Address" FontAttributes="Bold" />
+            <Label x:Name="AddressLabel" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CRM_Apps.Controls;assembly=CRM_Apps"
+             x:Class="CRM_Apps.View.AddCustomerPage"
+             Padding="8"
+             Title="Add Customer">
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Label Text="Name" FontAttributes="Bold" WidthRequest="80" />
+            <Entry x:Name="NameEntry" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Label Text="Company" FontAttributes="Bold" />
+            <Picker x:Name="CompanyPicker">
+                <Picker.Items>
+                    <x:String>Bank Mandiri</x:String>
+                    <x:String>Bank BRI</x:String>
+                    <x:String>Bank BTPN</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Label Text="Phone" FontAttributes="Bold" WidthRequest="80" />
+            <Entry x:Name="PhoneEntry" Keyboard="Telephone" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Label Text="Address" FontAttributes="Bold" WidthRequest="80" />
+            <Entry x:Name="AddressEntry" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button WidthRequest="120" x:Name="SaveButton" Text="Save" BackgroundColor="#0078D7" TextColor="White" />
+            <Button WidthRequest="120" x:Name="CancelButton" BackgroundColor="#757575" TextColor="White" Text="Cancel" Margin="8,0,0,0" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

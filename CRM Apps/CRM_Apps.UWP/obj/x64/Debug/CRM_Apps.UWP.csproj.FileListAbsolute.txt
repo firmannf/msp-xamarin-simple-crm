@@ -1,0 +1,10 @@
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\App.g.i.cs
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\App.g.cs
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\MainPage.g.i.cs
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\MainPage.g.cs
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\XamlTypeInfo.g.cs
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\App.xaml
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\MainPage.xaml
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\App.xbf
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\MainPage.xbf
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\obj\x64\Debug\XamlSaveStateFile.xml

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM_Apps.View.AddSalePage"
+             Padding="8"
+             Title="Add Sale">
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Label Text="Product" FontAttributes="Bold" WidthRequest="80" />
+            <Entry x:Name="ProductEntry" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Label Text="Price" FontAttributes="Bold" WidthRequest="80" />
+            <Entry x:Name="PriceEntry" Keyboard="Numeric" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Label Text="Ordered" FontAttributes="Bold" WidthRequest="80" />
+            <DatePicker x:Name="OrderedDatePicker" HorizontalOptions="FillAndExpand">
+                <DatePicker.Format>dd MMM yyyy</DatePicker.Format>
+            </DatePicker>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Label Text="Status" FontAttributes="Bold" WidthRequest="80" />
+            <Picker x:Name="StatusPicker" HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>Lead</x:String>
+                    <x:String>Negotiation</x:String>
+                    <x:String>Win</x:String>
+                    <x:String>Lose</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button WidthRequest="120" x:Name="SaveButton" Text="Save" BackgroundColor="#0078D7" TextColor="White" />
+            <Button WidthRequest="120" x:Name="CancelButton" BackgroundColor="#757575" TextColor="White" Text="Cancel" Margin="8,0,0,0" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

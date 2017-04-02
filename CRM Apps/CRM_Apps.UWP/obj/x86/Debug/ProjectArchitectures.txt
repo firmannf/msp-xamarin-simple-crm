@@ -1,0 +1,2 @@
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps.UWP\CRM_Apps.UWP.csproj;x86
+D:\Organization\MSP\FY17\JABAR1\workshop-xamarin-maranatha\Project\Xamarin\CRM Apps\CRM Apps\CRM_Apps\CRM_Apps.csproj;neutral

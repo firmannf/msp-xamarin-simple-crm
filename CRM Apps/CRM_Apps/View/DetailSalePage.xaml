@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM_Apps.View.DetailSalePage"
+             Padding="8"
+             Title="Detail Sale">
+    <StackLayout Orientation="Vertical">
+        <Label x:Name="TitleLabel" FontAttributes="Bold" FontSize="24" />
+        <Label x:Name="DescriptionLabel" FontSize="20" />
+        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray" />
+        <Label Text="OrderDate" FontAttributes="Bold" />
+        <Label x:Name="OrderDateLabel" />
+        <Label Text="Deal Value" FontAttributes="Bold" />
+        <Label x:Name="DealValueLabel" />
+    </StackLayout>
+</ContentPage>
